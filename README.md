@@ -4,19 +4,6 @@
 The purpose of this analysis is to determine the number of retiring employees per title and identify employees who are eligible to participate in a mentorship program. This analysis will help prepare for the "silver tsunami" as many current employees reach retirement age.
 
 ## Results
-<<<<<<< HEAD
-create a Retirement Titles table that holds all the titles of current employees who were born between January 1, 1952 and December 31, 1955. Because some employees may have multiple titles in the database—for example, due to promotions—you’ll need to use the DISTINCT ON statement to create a table that contains the most recent title of each employee. Then, use the COUNT() function to create a final table that has the number of retirement-age employees by most recent job title.
-
-retirement_titles - holds all titles of current employees who were born between 1952-1955 housing multiple titles for some employees
-
-unique_titles - from retirement_titles table used the DISTINCT ON statement to create a table that contains the most recent title of each employee
-
-retiring_titles - used count function to find the number of retirement-age employees in each title by their most recent job title
-
-mentorship_eligibility - holds current employees who were born in year 1965
-
-=======
->>>>>>> 5780fc316b8a4bb62b208d33399e703f39623620
 - The retirement_titles.csv holds all titles of current employees who were born between 1952-1955, housing multiple titles for some employees due to promotions. There are a total of 133,776 rows of data during this timeframe. 
 - The unique_titles.csv takes data from the retirement_titles table using the DISTINCT ON statement to create a table that contains the most recent title of each employee. There are a total of 90,398 unique employees listed during this timeframe.
 - The retiring_titles.csv takes the data from the unique_titles table and uses a COUNT function to find the number of retirement-age employees in each title by their most recent job title. 
@@ -28,19 +15,9 @@ Provide high-level responses to the following questions, then provide two additi
 
 How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 - There are 90,398 roles that are approaching the "silver tsunami" as employees born between 1952-1955 reach retirement age.
-<<<<<<< HEAD
-- ` SELECT COUNT(*)
-FROM unique_titles; `
-
-Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-- There are 1,549 qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees. It is not sufficient to cover the number of employees approaching the silver tsunami. Additionally, there are an insufficient number of Manager titles who are mentorship eligible.
-- 'SELECT COUNT(title) as count, title
-FROM mentorship_eligibility
-GROUP BY title
-ORDER BY count DESC;'
-=======
-``` SELECT COUNT(*)
-FROM unique_titles;
+``` 
+SELECT COUNT(*)
+FROM unique_titles; 
 ```
 
 Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
@@ -51,4 +28,3 @@ FROM mentorship_eligibility
 GROUP BY title
 ORDER BY count DESC;
 ```
->>>>>>> 5780fc316b8a4bb62b208d33399e703f39623620
